@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+
+.header {
+  display: flex;
+  align-items: center;
+  padding-inline: 5%;
+  background-color: $backgroundColor;
+}
+.header-title {
+  @include headerTitle();
+  flex-grow: 1;
+}
+
+.header-menu {
+  color: $primaryText;
+  display: flex;
+  margin-inline: 2vh;
+  font-size: 20px;
+}

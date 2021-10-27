@@ -1,0 +1,45 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-image {
+  margin-right: 5%;
+}
+.menu-image {
+  margin-left: 5%;
+}
+
+.container {
+  @include flexCenter();
+  margin-block: 5%;
+}
+.main-text-container {
+  @include flexCenter();
+  flex-direction: column;
+  margin-left: 5%;
+}
+.body-list {
+  line-height: 2.5em;
+  margin: 0em;
+}
+.open-hour-texts {
+  @include flexCenter();
+  flex-direction: column;
+  margin: 0;
+}
+
+.sandwich-list {
+  list-style-type: none;
+}
+.table-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  column-gap: 10%;
+  justify-content: center;
+  .table-header {
+    width: 300px;
+  }
+  margin-top: 3%;
+}
+

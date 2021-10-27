@@ -1,0 +1,65 @@
+$primaryTitle: #a16100;
+$primaryText: #553300;
+$secondaryText: #815c4c;
+$backgroundColor: #ededef;
+$borderLine: #c4c4c4;
+
+p {
+  margin: 0;
+}
+
+@mixin headerTitle {
+  font-family: Limelight;
+  font-size: 48px;
+  color: $primaryTitle;
+}
+
+@mixin pageTitle {
+  color: #553300;
+  font-size: 64px;
+  border-bottom: 8px dotted $borderLine;
+  border-top: 8px dotted $borderLine;
+}
+
+@mixin bodyText1 {
+  color: $primaryText;
+  font-size: 24px;
+}
+@mixin bodyText2 {
+  color: $secondaryText;
+  font-size: 18px;
+}
+@mixin subTitle {
+  color: $primaryTitle;
+  font-size: 30px;
+  margin-top: 1em;
+  margin-bottom: 0.4em;
+}
+.page-title {
+  @include pageTitle();
+  margin-block: 0.5em;
+}
+.body-text {
+  @include bodyText1();
+  margin-bottom: 1vh;
+}
+.sub-title {
+  @include subTitle();
+}
+.logo-title {
+  @include headerTitle();
+  margin-top: 0em;
+  margin-bottom: 0.2em;
+}
+.second-text {
+  @include bodyText2();
+  margin-bottom: 3vh;
+}
+.drink-text {
+  @include bodyText1();
+  margin: 0;
+}
+.drink-price-text {
+  @include bodyText2();
+  margin: 0;
+}
