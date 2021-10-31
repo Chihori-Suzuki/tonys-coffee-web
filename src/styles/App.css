@@ -18,6 +18,11 @@
       -ms-flex-align: center;
           align-items: center;
   margin-block: 5%;
+  background-color: #ededef;
+}
+
+.menu-container {
+  background-color: #ededef;
 }
 
 .main-text-container {
@@ -78,6 +83,24 @@
 
 .table-container .table-header {
   width: 300px;
+}
+
+.gallery-pics {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 30% 30%;
+      grid-template-columns: 30% 30% 30%;
+  -ms-grid-rows: 30% 30% 30%;
+      grid-template-rows: 30% 30% 30%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+}
+
+.map-container {
+  height: "100vh";
+  width: "100%";
 }
 
 p {
@@ -158,5 +181,10 @@ p {
   display: flex;
   margin-inline: 2vh;
   font-size: 20px;
+}
+
+body {
+  background-image: url(../image/Background.jpg);
+  background-size: contain;
 }
 /*# sourceMappingURL=App.css.map */

@@ -1,3 +1,9 @@
 @import "./containers";
 @import "./textFormat";
 @import "./header";
+
+body {
+  background-image: url(../image/Background.jpg);
+  background-size: contain;
+  // background-position:  center;
+}

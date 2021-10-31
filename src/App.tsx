@@ -4,6 +4,8 @@ import "./styles/App.css";
 import Header from "./components/Header";
 import About from "./components/About";
 import Menu from "./components/Menu";
+import Gallery from "./components/Gallery";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <Header />
       <About />
       <Menu />
+      <Gallery />
+      <Contact />
     </div>
   );
 }
