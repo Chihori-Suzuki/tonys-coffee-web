@@ -12,8 +12,8 @@ function Contact() {
   }
   const initialMapProps: MapProps = {
     center: {
-      lat: 49.26399451242248,
-      lng: 123.12231588904056,
+      lat: 49.26387900523431,
+      lng: -123.12220859868819,
     },
     zoom: 18,
   };
@@ -21,13 +21,17 @@ function Contact() {
   const API_KEY = "AIzaSyD11qyipS5P95TznVTMv5yKMTaZz4WoyB0";
   const [mapProps, setMapProps] = useState<MapProps>(initialMapProps);
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <div className="container">
+    <div style={{ width: "30vw", height: "100vh" }}>
       <GoogleMapReact
         bootstrapURLKeys={{ key: API_KEY }}
         center={mapProps.center}
         zoom={mapProps.zoom}
       />
     </div>
+    <div>
+      
+    </div></div>
   );
 }
 

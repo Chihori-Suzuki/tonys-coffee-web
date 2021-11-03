@@ -86,6 +86,8 @@
 }
 
 .gallery-pics {
+  background-color: #ededef;
+  margin: 5%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 30% 30% 30%;

@@ -52,6 +52,8 @@ $backgroundColor: #ededef;
 }
 
 .gallery-pics {
+  background-color: $backgroundColor;
+  margin: 5%;
   display: grid;
   grid-template-columns: 30% 30% 30%;
   grid-template-rows: 30% 30% 30%;
