@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+.bg-img {
+  position: relative;
+  min-height: 500px;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: 2;
+}
+
 .about-image {
   margin-right: 5%;
 }
@@ -17,12 +27,35 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-block: 5%;
+  padding-block: 5%;
+  background-color: #ededef;
+}
+
+.food-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-block: 10%;
   background-color: #ededef;
 }
 
 .menu-container {
   background-color: #ededef;
+  margin-top: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-inline: 10%;
 }
 
 .main-text-container {
@@ -39,7 +72,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 5%;
 }
 
 .body-list {
@@ -71,8 +103,8 @@
 .table-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
+  -ms-grid-columns: 60% 60%;
+      grid-template-columns: 60% 60%;
   -webkit-column-gap: 10%;
           column-gap: 10%;
   -webkit-box-pack: center;
@@ -87,7 +119,8 @@
 
 .gallery-pics {
   background-color: #ededef;
-  margin: 5%;
+  margin-top: 30%;
+  padding-block: 10%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 30% 30% 30%;
@@ -114,6 +147,7 @@ p {
   font-size: 64px;
   border-bottom: 8px dotted #c4c4c4;
   border-top: 8px dotted #c4c4c4;
+  font-weight: 300;
   margin-block: 0.5em;
 }
 
@@ -153,7 +187,7 @@ p {
 .drink-price-text {
   color: #815c4c;
   font-size: 18px;
-  margin: 0;
+  text-align: center;
 }
 
 .header {
@@ -183,10 +217,5 @@ p {
   display: flex;
   margin-inline: 2vh;
   font-size: 20px;
-}
-
-body {
-  background-image: url(../image/Background.jpg);
-  background-size: contain;
 }
 /*# sourceMappingURL=App.css.map */

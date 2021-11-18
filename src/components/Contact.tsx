@@ -1,6 +1,7 @@
 import { useState } from "react";
 // import GoogleMapReact from "google-maps-react";
 import GoogleMapReact from "google-map-react";
+import Image4 from "../image/background-4.jpg";
 
 function Contact() {
   interface MapProps {
@@ -21,17 +22,24 @@ function Contact() {
   const API_KEY = "AIzaSyD11qyipS5P95TznVTMv5yKMTaZz4WoyB0";
   const [mapProps, setMapProps] = useState<MapProps>(initialMapProps);
   return (
-    <div className="container">
-    <div style={{ width: "30vw", height: "100vh" }}>
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: API_KEY }}
-        center={mapProps.center}
-        zoom={mapProps.zoom}
-      />
-    </div>
-    <div>
-      
-    </div></div>
+    <>
+      <div
+        className="bg-img"
+        style={{
+          backgroundImage: `url(${Image4})`,
+        }}
+      ></div>
+      <div className="container">
+        <div style={{ width: "30vw", height: "100vh" }}>
+          <GoogleMapReact
+            bootstrapURLKeys={{ key: API_KEY }}
+            center={mapProps.center}
+            zoom={mapProps.zoom}
+          />
+        </div>
+        <div></div>
+      </div>
+    </>
   );
 }
 

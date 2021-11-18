@@ -18,6 +18,7 @@ p {
   font-size: 64px;
   border-bottom: 8px dotted $borderLine;
   border-top: 8px dotted $borderLine;
+  font-weight: 300;
 }
 
 @mixin bodyText1 {
@@ -60,5 +61,5 @@ p {
 }
 .drink-price-text {
   @include bodyText2();
-  margin: 0;
+  text-align: center;
 }
