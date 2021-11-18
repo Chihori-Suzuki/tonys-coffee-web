@@ -10,18 +10,22 @@ p {
 @mixin headerTitle {
   font-family: Limelight;
   font-size: 48px;
+  font-weight: 300;
   color: $primaryTitle;
 }
 
 @mixin pageTitle {
+  font-family: Lato;
   color: #553300;
-  font-size: 64px;
+  font-size: 58px;
   border-bottom: 8px dotted $borderLine;
   border-top: 8px dotted $borderLine;
-  font-weight: 300;
+  font-weight: 400;
+  padding: 3% 3%;
 }
 
 @mixin bodyText1 {
+  font-family: Lato;
   color: $primaryText;
   font-size: 24px;
 }
@@ -61,5 +65,10 @@ p {
 }
 .drink-price-text {
   @include bodyText2();
+  text-align: center;
+}
+.contact-text {
+  @include bodyText1();
+  margin-bottom: 1vh;
   text-align: center;
 }

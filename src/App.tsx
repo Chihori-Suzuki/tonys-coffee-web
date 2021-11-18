@@ -1,13 +1,14 @@
 import "./styles/App.css";
+import { useState } from "react";
+import GoogleMapReact from "google-map-react";
 import Header from "./components/Header";
-import Contact from "./components/Contact";
 import { sandwiches } from "./data/sandwiches";
 import { hotDrinks1, hotDrinks2 } from "./data/drinks";
 import { coldDrinks, brendedDrinks } from "./data/drinks";
 import Image1 from "./image/background-1.jpg";
 import Image2 from "./image/background-2.jpg";
 import Image3 from "./image/background-3.jpg";
-// import Image4 from "./image/background-4.jpg";
+import Image4 from "./image/background-4.jpg";
 
 const About = () => (
   <>
@@ -73,7 +74,7 @@ const Foods = () => {
 const Hotdrinks = () => {
   return (
     <div className="main-text-container">
-      <p className="sub-title">Hot Drinks</p>
+      <p className="sub-title">HOT Drinks</p>
       <div className="table-container">
         <table className="coffee-list">
           <tr>
@@ -184,6 +185,61 @@ const Gallery = () => {
         <img src="./pictures/gallery/IMG_4487.jpg" width="100%" height="100%" />
         <img src="./pictures/gallery/IMG_4489.jpg" width="100%" height="100%" />
         <img src="./pictures/gallery/IMG_4541.jpg" width="100%" height="100%" />
+      </div>
+    </>
+  );
+};
+const Contact = () => {
+  interface MapProps {
+    center: {
+      lat: number;
+      lng: number;
+    };
+    zoom: number;
+  }
+  const initialMapProps: MapProps = {
+    center: {
+      lat: 49.26387900523431,
+      lng: -123.12220859868819,
+    },
+    zoom: 18,
+  };
+  const apiKey = process.env.MAP_API_KEY as string;
+  const [mapProps, setMapProps] = useState<MapProps>(initialMapProps);
+  return (
+    <>
+      <div
+        className="bg-img"
+        style={{
+          backgroundImage: `url(${Image4})`,
+        }}
+      ></div>
+      <div className="container">
+        <div className="google-map" style={{ width: "30vw", height: "50vh" }}>
+          <GoogleMapReact
+            bootstrapURLKeys={{ key: apiKey }}
+            center={mapProps.center}
+            zoom={mapProps.zoom}
+          />
+        </div>
+         
+        <div className="main-text-container">
+          <h2 className="page-title">Contact</h2>
+          <p className="sub-title">Address</p>
+          <div className="open-hour-texts">
+            <p className="contact-text">
+              805 W Broadway, <br />
+              Vancouver, BC V5Z 1K1 <br />
+              <br />
+              TEL 604-871-0007
+              <br />
+              Monday to Friday 7:00 am - 3:30 pm
+            </p>
+            {/* <p className="body-text">Vancouver, BC V5Z 1K1 </p>
+            <p className="body-text">TEL 604-871-0007</p>
+            <p className="body-text">Monday to Friday 7:00 am - 3:30 pm</p> */}
+          </div>
+        </div>
       </div>
     </>
   );

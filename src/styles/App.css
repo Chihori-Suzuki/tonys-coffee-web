@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Limelight&display=swap");
 .bg-img {
   position: relative;
-  min-height: 500px;
+  min-height: 700px;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -47,7 +48,6 @@
 
 .menu-container {
   background-color: #ededef;
-  margin-top: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,6 +56,7 @@
       -ms-flex-direction: column;
           flex-direction: column;
   padding-inline: 10%;
+  padding-bottom: 10%;
 }
 
 .main-text-container {
@@ -119,12 +120,11 @@
 
 .gallery-pics {
   background-color: #ededef;
-  margin-top: 30%;
   padding-block: 10%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 30% 30% 30%;
-      grid-template-columns: 30% 30% 30%;
+  -ms-grid-columns: 25% 25% 25%;
+      grid-template-columns: 25% 25% 25%;
   -ms-grid-rows: 30% 30% 30%;
       grid-template-rows: 30% 30% 30%;
   -webkit-box-pack: center;
@@ -133,8 +133,12 @@
   justify-items: center;
 }
 
+.google-map {
+  margin-right: 5%;
+}
+
 .map-container {
-  height: "100vh";
+  height: "100%";
   width: "100%";
 }
 
@@ -143,15 +147,18 @@ p {
 }
 
 .page-title {
+  font-family: Lato;
   color: #553300;
-  font-size: 64px;
+  font-size: 58px;
   border-bottom: 8px dotted #c4c4c4;
   border-top: 8px dotted #c4c4c4;
-  font-weight: 300;
+  font-weight: 400;
+  padding: 3% 3%;
   margin-block: 0.5em;
 }
 
 .body-text {
+  font-family: Lato;
   color: #553300;
   font-size: 24px;
   margin-bottom: 1vh;
@@ -167,6 +174,7 @@ p {
 .logo-title {
   font-family: Limelight;
   font-size: 48px;
+  font-weight: 300;
   color: #a16100;
   margin-top: 0em;
   margin-bottom: 0.2em;
@@ -179,6 +187,7 @@ p {
 }
 
 .drink-text {
+  font-family: Lato;
   color: #553300;
   font-size: 24px;
   margin: 0;
@@ -187,6 +196,14 @@ p {
 .drink-price-text {
   color: #815c4c;
   font-size: 18px;
+  text-align: center;
+}
+
+.contact-text {
+  font-family: Lato;
+  color: #553300;
+  font-size: 24px;
+  margin-bottom: 1vh;
   text-align: center;
 }
 
@@ -204,6 +221,7 @@ p {
 .header-title {
   font-family: Limelight;
   font-size: 48px;
+  font-weight: 300;
   color: #a16100;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -211,11 +229,12 @@ p {
 }
 
 .header-menu {
+  font-family: Lato;
   color: #553300;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin-inline: 2vh;
-  font-size: 20px;
+  font-size: 24px;
 }
 /*# sourceMappingURL=App.css.map */

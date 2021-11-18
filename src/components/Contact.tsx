@@ -19,7 +19,7 @@ function Contact() {
     zoom: 18,
   };
 
-  const API_KEY = "AIzaSyD11qyipS5P95TznVTMv5yKMTaZz4WoyB0";
+  const apiKey: string = process.env.MAP_API_KEY as string;
   const [mapProps, setMapProps] = useState<MapProps>(initialMapProps);
   return (
     <>
@@ -32,7 +32,7 @@ function Contact() {
       <div className="container">
         <div style={{ width: "30vw", height: "100vh" }}>
           <GoogleMapReact
-            bootstrapURLKeys={{ key: API_KEY }}
+            bootstrapURLKeys={{ key: apiKey }}
             center={mapProps.center}
             zoom={mapProps.zoom}
           />
