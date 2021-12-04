@@ -1,14 +1,71 @@
-import React from "react";
+import { Link as Scroll } from "react-scroll";
+import { useMediaQuery } from "react-responsive";
+import { slide as BurgerMenu } from "react-burger-menu";
+import { useState } from "react";
 
-function Header() {
+// const HamburgerMenu = () => (
+//   <>
+//     <button className="hamburger_button">
+//       <div className="hamburgerMenu">
+//         <span className="hamburgerMenu__border" />
+//         <span className="hamburgerMenu__border" />
+//         <span className="hamburgerMenu__border" />
+//       </div>
+//     </button>
+//   </>
+// );
+
+const Menu = () => (
+  <>
+    <Scroll to="bg-img img1" className="header-menu">
+      Menu
+    </Scroll>
+    <Scroll to="bg-img img2" className="header-menu">
+      About
+    </Scroll>
+    <Scroll to="bg-img img3" className="header-menu">
+      Gallery
+    </Scroll>
+    <Scroll to="bg-img img4" className="header-menu">
+      Contact
+    </Scroll>
+  </>
+);
+
+const Header = () => {
+  const isBigScreen = useMediaQuery({ query: "(min-width: 768px)" });
+  const [open, setOpen] = useState(false);
+
   return (
-    <div className="header">
+    <nav className="header">
       <h1 className="header-title">Tony's Coffee</h1>
-      <p className="header-menu">Menu</p>
-      <p className="header-menu">About</p>
-      <p className="header-menu">Contact</p>
-    </div>
+
+      {isBigScreen ? (
+        <>
+          <Menu />
+        </>
+      ) : (
+        <>
+          <button className="hamburger-button" onClick={() => setOpen(!open)}>
+            {open ? (
+              <span className="hamburger-button-line open"></span>
+            ) : (
+              <span className="hamburger-button-line"></span>
+            )}
+          </button>
+          {open ? (
+            <div className="hamburgerMenu open">
+              <Menu />
+            </div>
+          ) : (
+            <div className="hamburgerMenu">
+              <Menu />
+            </div>
+          )}
+        </>
+      )}
+    </nav>
   );
-}
+};
 
 export default Header;

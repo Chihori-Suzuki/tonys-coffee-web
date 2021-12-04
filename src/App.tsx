@@ -9,11 +9,12 @@ import Image1 from "./image/background-1.jpg";
 import Image2 from "./image/background-2.jpg";
 import Image3 from "./image/background-3.jpg";
 import Image4 from "./image/background-4.jpg";
+require("dotenv").config();
 
 const About = () => (
   <>
     <div
-      className="bg-img"
+      className="bg-img img1"
       style={{
         backgroundImage: `url(${Image1})`,
       }}
@@ -153,7 +154,7 @@ const Menu = () => {
   return (
     <>
       <div
-        className="bg-img"
+        className="bg-img img2"
         style={{
           backgroundImage: `url(${Image2})`,
         }}
@@ -170,7 +171,7 @@ const Gallery = () => {
   return (
     <>
       <div
-        className="bg-img"
+        className="bg-img img3"
         style={{
           backgroundImage: `url(${Image3})`,
         }}
@@ -204,12 +205,13 @@ const Contact = () => {
     },
     zoom: 18,
   };
-  const apiKey = process.env.MAP_API_KEY as string;
+  // const apiKey = process.env.MAP_API_KEY as string;
+  const apiKey = "AIzaSyD11qyipS5P95TznVTMv5yKMTaZz4WoyB0";
   const [mapProps, setMapProps] = useState<MapProps>(initialMapProps);
   return (
     <>
       <div
-        className="bg-img"
+        className="bg-img img4"
         style={{
           backgroundImage: `url(${Image4})`,
         }}
