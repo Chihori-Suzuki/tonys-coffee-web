@@ -1,5 +1,6 @@
 import "./styles/App.css";
 import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 import GoogleMapReact from "google-map-react";
 import Header from "./components/Header";
 import { sandwiches } from "./data/sandwiches";
@@ -11,42 +12,48 @@ import Image3 from "./image/background-3.jpg";
 import Image4 from "./image/background-4.jpg";
 require("dotenv").config();
 
-const About = () => (
-  <>
-    <div
-      className="bg-img img1"
-      style={{
-        backgroundImage: `url(${Image1})`,
-      }}
-    ></div>
-    <div className="container">
-      <img
-        className="about-image"
-        src="./pictures/AboutMain.png"
-        width="380"
-        height="670"
-      />
-      <div className="main-text-container">
-        <h2 className="page-title">About</h2>
-        <h1 className="logo-title">Tony's Coffee</h1>
-        <p className="body-text">Coffee Shop in Vancouver</p>
-        <p className="sub-title">We're still here at Broadway!</p>
-        <ul className="body-list">
-          <li className="body-text">Call for pick up</li>
-          <li className="body-text">Drop by for take away</li>
-          <li className="body-text">Available for Eat-In & Free Wi-Fi</li>
-          <li className="body-text">Breakfast, Lunch, or Coffee break</li>
-        </ul>
-        <div className="open-hour-texts">
-          <p className="sub-title">Open</p>
-          <p className="body-text">Monday - Friday</p>
-          <p className="body-text">7:00 am - 3:30 pm</p>
+const About = () => {
+  const isBigScreen = useMediaQuery({ query: "(min-width: 890px)" });
+  return (
+    <>
+      <div
+        className="bg-img img1"
+        style={{
+          backgroundImage: `url(${Image1})`,
+        }}
+      ></div>
+      <div className="container">
+        {isBigScreen && (
+          <img
+            className="about-image"
+            src="./pictures/AboutMain.png"
+            width="380"
+            height="670"
+          />
+        )}
+        <div className="main-text-container">
+          <h2 className="page-title">About</h2>
+          <h1 className="logo-title">Tony's Coffee</h1>
+          <p className="body-text">Coffee Shop in Vancouver</p>
+          <p className="sub-title">We're still here at Broadway!</p>
+          <ul className="body-list">
+            <li className="body-text">Call for pick up</li>
+            <li className="body-text">Drop by for take away</li>
+            <li className="body-text">Available for Eat-In & Free Wi-Fi</li>
+            <li className="body-text">Breakfast, Lunch, or Coffee break</li>
+          </ul>
+          <div className="open-hour-texts">
+            <p className="sub-title">Open</p>
+            <p className="body-text">Monday - Friday</p>
+            <p className="body-text">7:00 am - 3:30 pm</p>
+          </div>
         </div>
       </div>
-    </div>
-  </>
-);
+    </>
+  );
+};
 const Foods = () => {
+  const isBigScreen = useMediaQuery({ query: "(min-width: 890px)" });
   return (
     <div className="food-container">
       <div className="main-text-container">
@@ -63,12 +70,14 @@ const Foods = () => {
           ))}
         </ul>
       </div>
-      <img
-        className="menu-image"
-        src="./pictures/MenuMain.jpg"
-        width="380"
-        height="670"
-      />
+      {isBigScreen && (
+        <img
+          className="menu-image"
+          src="./pictures/MenuMain.jpg"
+          width="380"
+          height="670"
+        />
+      )}
     </div>
   );
 };
@@ -142,7 +151,9 @@ const Otherdrinks = () => {
           <td className="drink-text">ALL BRENDED DRINKS</td>
           {brendedDrinks.map((drink) => (
             <tr>
-              <td className="drink-text">{drink}</td>
+              <td className="drink-text">
+                <li>{drink}</li>
+              </td>
             </tr>
           ))}
         </table>
@@ -191,6 +202,8 @@ const Gallery = () => {
   );
 };
 const Contact = () => {
+  const isBigScreen = useMediaQuery({ query: "(min-width: 890px)" });
+
   interface MapProps {
     center: {
       lat: number;
@@ -217,14 +230,13 @@ const Contact = () => {
         }}
       ></div>
       <div className="container">
-        <div className="google-map" style={{ width: "30vw", height: "50vh" }}>
+        <div className="google-map" style={{ width: "350px", height: "350px" }}>
           <GoogleMapReact
             bootstrapURLKeys={{ key: apiKey }}
             center={mapProps.center}
             zoom={mapProps.zoom}
           />
         </div>
-         
         <div className="main-text-container">
           <h2 className="page-title">Contact</h2>
           <p className="sub-title">Address</p>
@@ -237,9 +249,6 @@ const Contact = () => {
               <br />
               Monday to Friday 7:00 am - 3:30 pm
             </p>
-            {/* <p className="body-text">Vancouver, BC V5Z 1K1 </p>
-            <p className="body-text">TEL 604-871-0007</p>
-            <p className="body-text">Monday to Friday 7:00 am - 3:30 pm</p> */}
           </div>
         </div>
       </div>

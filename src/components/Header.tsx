@@ -1,19 +1,8 @@
 import { Link as Scroll } from "react-scroll";
 import { useMediaQuery } from "react-responsive";
-import { slide as BurgerMenu } from "react-burger-menu";
+// import { slide as BurgerMenu } from "react-burger-menu";
 import { useState } from "react";
 
-// const HamburgerMenu = () => (
-//   <>
-//     <button className="hamburger_button">
-//       <div className="hamburgerMenu">
-//         <span className="hamburgerMenu__border" />
-//         <span className="hamburgerMenu__border" />
-//         <span className="hamburgerMenu__border" />
-//       </div>
-//     </button>
-//   </>
-// );
 
 const Menu = () => (
   <>
@@ -33,37 +22,39 @@ const Menu = () => (
 );
 
 const Header = () => {
-  const isBigScreen = useMediaQuery({ query: "(min-width: 768px)" });
+  const isBigScreen = useMediaQuery({ query: "(min-width: 1000px)" });
   const [open, setOpen] = useState(false);
 
   return (
     <nav className="header">
-      <h1 className="header-title">Tony's Coffee</h1>
+      <div className="header-contents">
+        <h1 className="header-title">Tony's Coffee</h1>
 
-      {isBigScreen ? (
-        <>
-          <Menu />
-        </>
-      ) : (
-        <>
-          <button className="hamburger-button" onClick={() => setOpen(!open)}>
+        {isBigScreen ? (
+          <>
+            <Menu />
+          </>
+        ) : (
+          <>
+            <button className="hamburger-button" onClick={() => setOpen(!open)}>
+              {open ? (
+                <span className="hamburger-button-line open"></span>
+              ) : (
+                <span className="hamburger-button-line"></span>
+              )}
+            </button>
             {open ? (
-              <span className="hamburger-button-line open"></span>
+              <div className="hamburgerMenu open">
+                <Menu />
+              </div>
             ) : (
-              <span className="hamburger-button-line"></span>
+              <div className="hamburgerMenu">
+                <Menu />
+              </div>
             )}
-          </button>
-          {open ? (
-            <div className="hamburgerMenu open">
-              <Menu />
-            </div>
-          ) : (
-            <div className="hamburgerMenu">
-              <Menu />
-            </div>
-          )}
-        </>
-      )}
+          </>
+        )}
+      </div>
     </nav>
   );
 };

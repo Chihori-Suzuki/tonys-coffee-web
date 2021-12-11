@@ -1,5 +1,5 @@
 $backgroundColor: #ededef;
-$breakpoint-md: 768px;
+$breakpoint-md: 1000px;
 $breakpoint-sm: 425px;
 
 @mixin flexCenter {
@@ -8,9 +8,6 @@ $breakpoint-sm: 425px;
   align-items: center;
 }
 
-// .bg-img.img1 {
-//   background-image: url(../image/IMG_4388.jpg);
-// }
 .bg-img {
   position: static;
   min-height: 700px;
@@ -23,7 +20,8 @@ $breakpoint-sm: 425px;
     min-height: 500px;
   }
   @media only screen and (max-width: $breakpoint-sm) {
-    min-height: 350px;
+    min-height: 300px;
+    background-attachment: unset;
   }
 }
 
@@ -36,8 +34,11 @@ $breakpoint-sm: 425px;
 
 .container {
   @include flexCenter();
-  padding-block: 5%;
+  padding: 5% 3% 5% 3%;
   background-color: $backgroundColor;
+  @media only screen and (max-width: 890px) {
+    flex-direction: column;
+  }
 }
 
 .food-container {
@@ -73,7 +74,9 @@ $breakpoint-sm: 425px;
 }
 .table-container {
   display: grid;
-  grid-template-columns: 60% 60%;
+  @media only screen and (min-width: $breakpoint-md) {
+    grid-template-columns: 60% 60%;
+  }
   column-gap: 10%;
   justify-content: center;
   .table-header {
@@ -93,7 +96,9 @@ $breakpoint-sm: 425px;
 }
 
 .google-map {
-  margin-right: 5%;
+  @media only screen and (min-width: 890px) {
+    margin-right: 5%;
+  }
 }
 .map-container {
   height: "100%";
