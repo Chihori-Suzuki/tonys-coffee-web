@@ -85,16 +85,24 @@ $breakpoint-sm: 425px;
   margin-top: 3%;
 }
 
-.gallery-pics {
+.container-gallery-pics {
   background-color: $backgroundColor;
   padding-block: 10%;
   display: grid;
-  grid-template-columns: 25% 25% 25%;
-  grid-template-rows: 30% 30% 30%;
+  @media only screen and (min-width: $breakpoint-md) {
+    grid-template-columns: 25% 25% 25%;
+    grid-template-rows: 30% 30% 30%;
+  }
+  @media only screen and (max-width: $breakpoint-md) {
+    grid-template-columns: 40% 40%;
+  }
   justify-content: center;
   justify-items: center;
 }
-
+.gallery-pics {
+  width: 100%;
+  height: auto;
+}
 .google-map {
   @media only screen and (min-width: 890px) {
     margin-right: 5%;
