@@ -37,6 +37,10 @@ p {
 .header-menu:hover {
   border-bottom: 3px solid $borderLine;
   cursor: pointer;
+  @media only screen and (max-width: $breakpoint-md) {
+    background-color: #dedede;
+    border-bottom: none;
+  }
 }
 
 @mixin pageTitle {

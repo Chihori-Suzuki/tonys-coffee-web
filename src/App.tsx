@@ -10,6 +10,10 @@ import Image1 from "./image/background-1.jpg";
 import Image2 from "./image/background-2.jpg";
 import Image3 from "./image/background-3.jpg";
 import Image4 from "./image/background-4.jpg";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
+
 require("dotenv").config();
 
 const About = () => {
@@ -22,7 +26,7 @@ const About = () => {
           backgroundImage: `url(${Image1})`,
         }}
       ></div>
-      <div className="container">
+      <div className="container about">
         {isBigScreen && (
           <img
             className="about-image"
@@ -202,8 +206,6 @@ const Gallery = () => {
   );
 };
 const Contact = () => {
-  const isBigScreen = useMediaQuery({ query: "(min-width: 890px)" });
-
   interface MapProps {
     center: {
       lat: number;
@@ -218,6 +220,16 @@ const Contact = () => {
     },
     zoom: 18,
   };
+
+  const MyMarker = ({ text }: any) => {
+    const iconStyle: React.CSSProperties = { fontSize: 36, color: "red" };
+    return (
+      <>
+        <FontAwesomeIcon style={iconStyle} icon={faMapMarkerAlt} />
+      </>
+    );
+  };
+
   // const apiKey = process.env.MAP_API_KEY as string;
   const apiKey = "AIzaSyD11qyipS5P95TznVTMv5yKMTaZz4WoyB0";
   const [mapProps, setMapProps] = useState<MapProps>(initialMapProps);
@@ -229,13 +241,22 @@ const Contact = () => {
           backgroundImage: `url(${Image4})`,
         }}
       ></div>
-      <div className="container">
-        <div className="google-map" style={{ width: "350px", height: "350px" }}>
+      <div className="container contact">
+        <div
+          className="google-map"
+          style={{ width: "350px", height: "350px", zIndex: 0 }}
+        >
           <GoogleMapReact
             bootstrapURLKeys={{ key: apiKey }}
             center={mapProps.center}
             zoom={mapProps.zoom}
-          />
+          >
+            <MyMarker
+              lat={mapProps.center.lat}
+              lng={mapProps.center.lng}
+              text="My Marker"
+            />
+          </GoogleMapReact>
         </div>
         <div className="main-text-container">
           <h2 className="page-title">Contact</h2>

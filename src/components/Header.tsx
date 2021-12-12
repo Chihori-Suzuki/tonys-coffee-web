@@ -3,19 +3,38 @@ import { useMediaQuery } from "react-responsive";
 // import { slide as BurgerMenu } from "react-burger-menu";
 import { useState } from "react";
 
-
 const Menu = () => (
   <>
-    <Scroll to="bg-img img1" className="header-menu">
+    <Scroll
+      to="menu-container"
+      className="header-menu"
+      smooth={true}
+      duration={600}
+    >
       Menu
     </Scroll>
-    <Scroll to="bg-img img2" className="header-menu">
+    <Scroll
+      to="container about"
+      className="header-menu"
+      smooth={true}
+      duration={600}
+    >
       About
     </Scroll>
-    <Scroll to="bg-img img3" className="header-menu">
+    <Scroll
+      to="gallery-pics"
+      className="header-menu"
+      smooth={true}
+      duration={600}
+    >
       Gallery
     </Scroll>
-    <Scroll to="bg-img img4" className="header-menu">
+    <Scroll
+      to="container contact"
+      className="header-menu"
+      smooth={true}
+      duration={600}
+    >
       Contact
     </Scroll>
   </>
