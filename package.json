@@ -1,4 +1,5 @@
 {
+  "homepage": "http://Chihori-Suzuki.github.io/tonys-web",
   "name": "tonys-web",
   "version": "0.1.0",
   "private": true,
@@ -27,6 +28,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -52,6 +55,7 @@
   },
   "devDependencies": {
     "@types/google-map-react": "^2.1.3",
+    "gh-pages": "^3.2.3",
     "react-scroll": "^1.8.4"
   }
 }
