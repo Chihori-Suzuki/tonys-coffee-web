@@ -153,6 +153,8 @@ const Otherdrinks = () => {
             <th>20oz</th>
           </tr>
           <td className="drink-text">ALL BRENDED DRINKS</td>
+          <td className="drink-price-text">4.76</td>
+          <td className="drink-price-text">5.71</td>
           {brendedDrinks.map((drink) => (
             <tr>
               <td className="drink-text">
