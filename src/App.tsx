@@ -30,7 +30,7 @@ const About = () => {
         {isBigScreen && (
           <img
             className="about-image"
-            src="./pictures/AboutMain.png"
+            src="./pictures/AboutMain.webp"
             width="380"
             height="670"
           />
@@ -77,7 +77,7 @@ const Foods = () => {
       {isBigScreen && (
         <img
           className="menu-image"
-          src="./pictures/MenuMain.jpg"
+          src="./pictures/MenuMain.webp"
           width="380"
           height="670"
         />
@@ -194,15 +194,51 @@ const Gallery = () => {
         }}
       ></div>
       <div className="container-gallery-pics">
-        <img src="./pictures/gallery/IMG_4440.jpg" width="100%" height="auto" />
-        <img src="./pictures/gallery/IMG_4445.jpg" width="100%" height="auto" />
-        <img src="./pictures/gallery/IMG_4452.jpg" width="100%" height="auto" />
-        <img src="./pictures/gallery/IMG_4457.jpg" width="100%" height="auto" />
-        <img src="./pictures/gallery/IMG_4482.jpg" width="100%" height="auto" />
-        <img src="./pictures/gallery/IMG_4485.jpg" width="100%" height="auto" />
-        <img src="./pictures/gallery/IMG_4487.jpg" width="100%" height="auto" />
-        <img src="./pictures/gallery/IMG_4489.jpg" width="100%" height="auto" />
-        <img src="./pictures/gallery/IMG_4541.jpg" width="100%" height="auto" />
+        <img
+          src="./pictures/gallery/IMG_4440.webp"
+          width="100%"
+          height="auto"
+        />
+        <img
+          src="./pictures/gallery/IMG_4445.webp"
+          width="100%"
+          height="auto"
+        />
+        <img
+          src="./pictures/gallery/IMG_4452.webp"
+          width="100%"
+          height="auto"
+        />
+        <img
+          src="./pictures/gallery/IMG_4457.webp"
+          width="100%"
+          height="auto"
+        />
+        <img
+          src="./pictures/gallery/IMG_4482.webp"
+          width="100%"
+          height="auto"
+        />
+        <img
+          src="./pictures/gallery/IMG_4485.webp"
+          width="100%"
+          height="auto"
+        />
+        <img
+          src="./pictures/gallery/IMG_4487.webp"
+          width="100%"
+          height="auto"
+        />
+        <img
+          src="./pictures/gallery/IMG_4489.webp"
+          width="100%"
+          height="auto"
+        />
+        <img
+          src="./pictures/gallery/IMG_4541.webp"
+          width="100%"
+          height="auto"
+        />
       </div>
     </>
   );
