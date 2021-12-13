@@ -1,26 +1,26 @@
 {
   "files": {
     "main.css": "/tonys-coffee-web/static/css/main.4b66b63f.chunk.css",
-    "main.js": "/tonys-coffee-web/static/js/main.6040b4f3.chunk.js",
-    "main.js.map": "/tonys-coffee-web/static/js/main.6040b4f3.chunk.js.map",
-    "runtime-main.js": "/tonys-coffee-web/static/js/runtime-main.b563e39c.js",
-    "runtime-main.js.map": "/tonys-coffee-web/static/js/runtime-main.b563e39c.js.map",
-    "static/js/2.5ca113b9.chunk.js": "/tonys-coffee-web/static/js/2.5ca113b9.chunk.js",
-    "static/js/2.5ca113b9.chunk.js.map": "/tonys-coffee-web/static/js/2.5ca113b9.chunk.js.map",
-    "static/js/3.1ed27893.chunk.js": "/tonys-coffee-web/static/js/3.1ed27893.chunk.js",
-    "static/js/3.1ed27893.chunk.js.map": "/tonys-coffee-web/static/js/3.1ed27893.chunk.js.map",
+    "main.js": "/tonys-coffee-web/static/js/main.a9b3234e.chunk.js",
+    "main.js.map": "/tonys-coffee-web/static/js/main.a9b3234e.chunk.js.map",
+    "runtime-main.js": "/tonys-coffee-web/static/js/runtime-main.80bd09e1.js",
+    "runtime-main.js.map": "/tonys-coffee-web/static/js/runtime-main.80bd09e1.js.map",
+    "static/js/2.cb13ae80.chunk.js": "/tonys-coffee-web/static/js/2.cb13ae80.chunk.js",
+    "static/js/2.cb13ae80.chunk.js.map": "/tonys-coffee-web/static/js/2.cb13ae80.chunk.js.map",
+    "static/js/3.e8c05965.chunk.js": "/tonys-coffee-web/static/js/3.e8c05965.chunk.js",
+    "static/js/3.e8c05965.chunk.js.map": "/tonys-coffee-web/static/js/3.e8c05965.chunk.js.map",
     "index.html": "/tonys-coffee-web/index.html",
     "static/css/main.4b66b63f.chunk.css.map": "/tonys-coffee-web/static/css/main.4b66b63f.chunk.css.map",
-    "static/js/2.5ca113b9.chunk.js.LICENSE.txt": "/tonys-coffee-web/static/js/2.5ca113b9.chunk.js.LICENSE.txt",
+    "static/js/2.cb13ae80.chunk.js.LICENSE.txt": "/tonys-coffee-web/static/js/2.cb13ae80.chunk.js.LICENSE.txt",
     "static/media/background-1.7a95ea62.jpg": "/tonys-coffee-web/static/media/background-1.7a95ea62.jpg",
     "static/media/background-2.0c56e93f.jpg": "/tonys-coffee-web/static/media/background-2.0c56e93f.jpg",
     "static/media/background-3.9ed7a1e3.jpg": "/tonys-coffee-web/static/media/background-3.9ed7a1e3.jpg",
     "static/media/background-4.7d285c55.jpg": "/tonys-coffee-web/static/media/background-4.7d285c55.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.b563e39c.js",
-    "static/js/2.5ca113b9.chunk.js",
+    "static/js/runtime-main.80bd09e1.js",
+    "static/js/2.cb13ae80.chunk.js",
     "static/css/main.4b66b63f.chunk.css",
-    "static/js/main.6040b4f3.chunk.js"
+    "static/js/main.a9b3234e.chunk.js"
   ]
 }
