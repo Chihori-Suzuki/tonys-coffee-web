@@ -1,18 +1,9 @@
 import { Link as Scroll } from "react-scroll";
 import { useMediaQuery } from "react-responsive";
-// import { slide as BurgerMenu } from "react-burger-menu";
 import { useState } from "react";
 
 const Menu = () => (
   <>
-    <Scroll
-      to="menu-container"
-      className="header-menu"
-      smooth={true}
-      duration={600}
-    >
-      Menu
-    </Scroll>
     <Scroll
       to="container about"
       className="header-menu"
@@ -22,7 +13,15 @@ const Menu = () => (
       About
     </Scroll>
     <Scroll
-      to="gallery-pics"
+      to="menu-container"
+      className="header-menu"
+      smooth={true}
+      duration={600}
+    >
+      Menu
+    </Scroll>
+    <Scroll
+      to="container-gallery-pics"
       className="header-menu"
       smooth={true}
       duration={600}
