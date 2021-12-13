@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/tonys-coffee-web/static/css/main.4b66b63f.chunk.css",
-    "main.js": "/tonys-coffee-web/static/js/main.a9b3234e.chunk.js",
-    "main.js.map": "/tonys-coffee-web/static/js/main.a9b3234e.chunk.js.map",
+    "main.js": "/tonys-coffee-web/static/js/main.da5eb499.chunk.js",
+    "main.js.map": "/tonys-coffee-web/static/js/main.da5eb499.chunk.js.map",
     "runtime-main.js": "/tonys-coffee-web/static/js/runtime-main.80bd09e1.js",
     "runtime-main.js.map": "/tonys-coffee-web/static/js/runtime-main.80bd09e1.js.map",
     "static/js/2.cb13ae80.chunk.js": "/tonys-coffee-web/static/js/2.cb13ae80.chunk.js",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.80bd09e1.js",
     "static/js/2.cb13ae80.chunk.js",
     "static/css/main.4b66b63f.chunk.css",
-    "static/js/main.a9b3234e.chunk.js"
+    "static/js/main.da5eb499.chunk.js"
   ]
 }
